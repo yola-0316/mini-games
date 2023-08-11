@@ -23,5 +23,16 @@
 
 body {
   margin: 0;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+}
+
+#app {
+  padding: 0.5rem;
+  border: dashed 1px #abf;
+  font-size: 0;
 }

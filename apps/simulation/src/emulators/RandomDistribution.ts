@@ -3,7 +3,7 @@ import P5 from "p5";
 import { Emulator } from "../types";
 
 export class RandomDistribution implements Emulator {
-  private randomCounts: number[] = Array.from({ length: 200 }, () => 0);
+  private randomCounts: number[] = Array.from({ length: 50 }, () => 0);
 
   constructor(private sk: P5) {}
 
