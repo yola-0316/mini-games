@@ -1,6 +1,7 @@
 import P5 from "p5";
 
 import { Emulator } from "../types";
+import { montecarlo } from "../utils";
 
 export class Walker implements Emulator {
   private x = 0;
@@ -48,6 +49,19 @@ export class Walker implements Emulator {
     } else if (r < 0.7) {
       this.x--;
     } else if (r < 0.8) {
+      this.y++;
+    } else {
+      this.y--;
+    }
+  }
+
+  method4() {
+    const r = montecarlo();
+    if (r < 0.25) {
+      this.x++;
+    } else if (r < 0.5) {
+      this.x--;
+    } else if (r < 0.75) {
       this.y++;
     } else {
       this.y--;
